@@ -223,7 +223,9 @@ const ComponentRenderer = ({
       case "container":
         content = (
           <>
-            <div className="container-label">{child.label}</div>
+            <div className="container-label">
+              {/* {child.label} */}
+              </div>
             <div
               className="container-content"
               style={{
@@ -235,18 +237,6 @@ const ComponentRenderer = ({
             >
               {renderComponents(child.children || [], child.id)}
             </div>
-            <div
-              className="resizable-handle"
-              style={{
-                position: "absolute",
-                right: "0",
-                bottom: "0",
-                width: "10px",
-                height: "10px",
-                background: "#1890ff",
-                cursor: "nwse-resize",
-              }}
-            />
           </>
         )
         break
